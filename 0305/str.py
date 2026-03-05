@@ -1,6 +1,6 @@
 # 字串
 a = 'hello'
-b = "hello"
+b = "python"
 
 print(a)
 
@@ -26,3 +26,8 @@ s = '0123456789'
 # print(s[::-1])
 print(s[::-1])
 
+
+# 字串串聯
+
+print(a + ' ' + b)
+print('|' * 50)
