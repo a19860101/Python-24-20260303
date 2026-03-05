@@ -29,9 +29,18 @@ s = 'hElLo World World'
 
 # 計算
 # count()
+# 計算指定文字的出現次數。
 print(s.count('o'))
 print(s.count('a'))
 print(s.count('World'))
 
 # len()
+# 計算文字數量
 print(len(s))
+
+#split()
+q = 'hello,world,!!'
+print(s.split())
+print(q.split(',', 1))
+print(q.split('o'))
+
