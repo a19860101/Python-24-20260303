@@ -1,6 +1,6 @@
 # match
 
-day = 89
+day = 123123123
 
 # if day == 0:
 #     print('星期日')
@@ -23,5 +23,13 @@ match day:
         print('星期五')
     case 6:
         print('星期六')
+    case _:
+        print('系統錯誤')
+
+match day:
+    case 1|2|3|4|5 :
+        print('營業中')
+    case 0|6 :
+        print('放假')
     case _:
         print('系統錯誤')
