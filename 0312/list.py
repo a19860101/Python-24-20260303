@@ -12,5 +12,15 @@ l1 = ['apple', 'banana', 'cat','dog','elephant','fork']
 # print(l1[::2])
 
 # 遍歷
-for x in l1:
-    print(x)
+# for x in l1:
+#     print(x)
+
+
+# for x in enumerate(l1):
+#     print(x)
+#     print(x[0], x[1])
+
+for idx,data in enumerate(l1):
+    # print(idx,data)
+    print(idx)
+    print(data)
