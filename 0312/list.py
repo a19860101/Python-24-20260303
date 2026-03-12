@@ -45,12 +45,21 @@ l1 = ['apple', 'banana', 'cat','dog','elephant','fork','cat']
 
 # l1.clear()
 
-#
+# 查詢
 # l1.index('cat')
 
-print(l1.index('c;l'))
+# print(l1.index('c;l'))
 # print(l1.count('apple'))
 # print(l1.count('lkjh'))
 
-print('apple' in l1)
-print('ddd' in l1)
+# print('apple' in l1)
+# print('ddd' in l1)
+
+# 排序
+# l1.sort()
+# l1.sort(reverse=True)
+# l1.reverse()
+
+l2 = sorted(l1)
+print(l1)
+print(l2)
