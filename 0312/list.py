@@ -36,7 +36,7 @@ l1 = ['apple', 'banana', 'cat','dog','elephant','fork','cat']
 # l1.extend(['test', 'test2', 'test3'])
 
 # 刪除
-l1.remove('cat')
+# l1.remove('cat')
 
 # l1.pop()
 # l1.pop(2)
@@ -44,4 +44,13 @@ l1.remove('cat')
 # del l1[3]
 
 # l1.clear()
-print(l1)
+
+#
+# l1.index('cat')
+
+print(l1.index('c;l'))
+# print(l1.count('apple'))
+# print(l1.count('lkjh'))
+
+print('apple' in l1)
+print('ddd' in l1)
