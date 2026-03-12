@@ -1,4 +1,4 @@
-l1 = ['apple', 'banana', 'cat','dog','elephant','fork']
+l1 = ['apple', 'banana', 'cat','dog','elephant','fork','cat']
 # print(l1)
 # print(l1[0])
 # print(l1[1])
@@ -35,4 +35,13 @@ l1 = ['apple', 'banana', 'cat','dog','elephant','fork']
 # extend()
 # l1.extend(['test', 'test2', 'test3'])
 
+# 刪除
+l1.remove('cat')
+
+# l1.pop()
+# l1.pop(2)
+
+# del l1[3]
+
+# l1.clear()
 print(l1)
