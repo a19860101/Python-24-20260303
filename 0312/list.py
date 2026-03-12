@@ -60,6 +60,6 @@ l1 = ['apple', 'banana', 'cat','dog','elephant','fork','cat']
 # l1.sort(reverse=True)
 # l1.reverse()
 
-l2 = sorted(l1)
+l2 = sorted(l1, reverse=True)
 print(l1)
 print(l2)
