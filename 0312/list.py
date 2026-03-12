@@ -15,12 +15,24 @@ l1 = ['apple', 'banana', 'cat','dog','elephant','fork']
 # for x in l1:
 #     print(x)
 
-
+# enumerate
 # for x in enumerate(l1):
 #     print(x)
 #     print(x[0], x[1])
 
-for idx,data in enumerate(l1):
-    # print(idx,data)
-    print(idx)
-    print(data)
+# for idx,data in enumerate(l1):
+    # print(idx)
+    # print(data)
+
+# list方法
+# 新增
+# append()
+# l1.append('asdf')
+
+# insert()
+# l1.insert(1, 'test')
+
+# extend()
+# l1.extend(['test', 'test2', 'test3'])
+
+print(l1)
