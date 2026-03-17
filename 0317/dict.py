@@ -6,6 +6,12 @@ user = {
     'mail': 'john@gmail.com'
 }
 
+user2 = {
+    'name': 'Mary',
+    'age': 20,
+    'addr': 'taiwan'
+}
+
 # user2 = {}
 # user3 = dict()
 # user4 = dict(name='John', age=22, mail='')
@@ -44,5 +50,9 @@ user['name'] = '王約翰'
 # 刪除
 del user['age']
 
-print(user)
+# print(user)
+# 合併更新
+user.update(user2)
 
+user.clear()
+print(user)
