@@ -26,14 +26,23 @@ user = {
 # 取得所有鍵
 # print(user.keys())
 # 取得所有鍵、值
-print(user.items())
+# print(user.items())
 
-for v in user.values():
-    print(v)
+# for v in user.values():
+#     print(v)
+#
+# for k in user.keys():
+#     print(k)
+#
+# for k, v in user.items():
+#     print(f'{k}: {v}')
 
-for k in user.keys():
-    print(k)
+# 新增
+user['addr'] = '台灣台北'
+# 修改
+user['name'] = '王約翰'
+# 刪除
+del user['age']
 
-for k, v in user.items():
-    print(f'{k}: {v}')
+print(user)
 
