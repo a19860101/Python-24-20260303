@@ -26,6 +26,7 @@ print(s1)
 
 a = {1,2,3}
 b = {3,4,5}
+c = {2,5,8}
 
 # 聯集
 print(a.union(b))
@@ -38,3 +39,14 @@ print(a.difference(b))
 print(a - b)
 print(b.difference(a))
 print(b - a)
+# 對稱差集
+print(a.symmetric_difference(b))
+print(a ^ b)
+
+print(a & b & c)
+print(a | b | c)
+print((a | b) & c)
+
+# print(a.intersection(b).intersection(c))
+print(a.union(b).union(c))
+print(a.union(b).intersection(c))
