@@ -1,7 +1,7 @@
 # tuple
-
+# 不可變
 # 建立
-t1 = ('apple', 'banana', 'cherry')
+t1 = ('apple', 'banana', 'cherry', 'banana','banana')
 
 # print(t1)
 # print(type(t1))
@@ -25,4 +25,13 @@ size = (1024, 768, 32)
 # d = size[2]
 
 w, h, d = size
-print(w, h, d)
+# print(w, h, d)
+
+print(t1.index('banana'))
+print(t1.count('banana'))
+print(len(t1))
+
+# q = t1 + size
+t1 = t1 + size
+print(t1)
+
