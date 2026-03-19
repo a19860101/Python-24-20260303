@@ -12,6 +12,7 @@ user2 = {
     'addr': 'taiwan'
 }
 
+
 # user2 = {}
 # user3 = dict()
 # user4 = dict(name='John', age=22, mail='')

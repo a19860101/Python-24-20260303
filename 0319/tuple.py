@@ -14,5 +14,15 @@ t1 = ('apple', 'banana', 'cherry')
 # print(type(t4))
 
 t5 = (1,)
-print(t5)
-print(type(t5))
+# print(t5)
+# print(type(t5))
+
+# 解構賦值 unpack
+
+size = (1024, 768, 32)
+# w = size[0]
+# h = size[1]
+# d = size[2]
+
+w, h, d = size
+print(w, h, d)
