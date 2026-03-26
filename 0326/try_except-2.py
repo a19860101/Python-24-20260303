@@ -1,10 +1,15 @@
 
+
 class TestError(Exception):
     pass
 
 
 try:
-    age = int(input('請輸入年齡：'))
+    age = input('請輸入年齡：')
+    if not age.isdigit():
+        raise ValueError('請輸入數字')
+    else:
+        age = int(age)
     if age < 0:
         raise TestError('年齡不可為負數')
 
@@ -18,4 +23,5 @@ except TestError as e:
 
 finally:
     print('------程式結束!!------')
+
 
