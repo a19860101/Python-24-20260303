@@ -6,7 +6,7 @@ data = [
 ]
 
 with open('0326.csv','w',encoding='utf-8') as f:
-    # writer = csv.writer(f)
-    # writer.writerows(data)
+    writer = csv.writer(f)
+    writer.writerows(data)
     # writer.writerow(data)
-    csv.writer(f).writerow(data)
+    # csv.writer(f).writerow(data)
