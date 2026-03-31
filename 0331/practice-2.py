@@ -18,8 +18,14 @@ for item in all_files:
     name,ext = os.path.splitext(item)
     ext = ext.lower()
 
-    if not os.path.exists(rules.get(ext)):
-        os.makedirs(rules.get(ext))
+    new_dir_name = rules.get(ext)
+
+    if not os.path.exists(new_dir_name):
+        os.makedirs(new_dir_name)
+
+    new_path = os.path.join(new_dir_name,item)
+
+    shutil.move(old_path,new_path)
 
 
 
