@@ -22,8 +22,3 @@ print(dirname)
 name, ext = os.path.splitext(filename)
 print(name)
 print(ext[1:])
-
-if ext == '.jpg':
-    print('圖片')
-else:
-    print('非圖片')
