@@ -1,7 +1,10 @@
 from PIL import Image
-import os
+import os,glob
 
-img = Image.open('./images/shana-van-roosbroek-gdPqNWGfqW4-unsplash.jpg')
+images = glob.glob('./images/*.jpg')
+print(images)
+img = Image.open(images[0])
+# img = Image.open('./images/shana-van-roosbroek-gdPqNWGfqW4-unsplash.jpg')
 
 w1, h1 = img.size
 
