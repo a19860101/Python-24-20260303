@@ -7,7 +7,10 @@ target_dir = './'
 rules = {
     '.html':'網頁檔',
     '.txt':'文字檔',
+    '.docx': '文字檔',
     '.jpg': '圖片檔',
+    '.png': '圖片檔',
+    '.gif': '圖片檔',
     '.py': '大蟒蛇'
 }
 all_files = os.listdir(target_dir)
