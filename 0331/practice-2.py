@@ -1,7 +1,8 @@
 import os
 import shutil
+import sys
 
-target_dir = './00000'
+target_dir = './'
 
 rules = {
     '.html':'網頁檔',
@@ -11,12 +12,19 @@ rules = {
 }
 all_files = os.listdir(target_dir)
 
+self_file = os.path.basename(sys.argv[0])
+
+print(self_file)
+
 # print(rules['.html'])
 print(rules.get('.html'))
 for item in all_files:
     old_path = os.path.join(target_dir,item)
     name,ext = os.path.splitext(item)
     ext = ext.lower()
+
+    if self_file == item:
+        continue
 
     new_dir_name = rules.get(ext,'其他')
 
@@ -27,8 +35,10 @@ for item in all_files:
 
     print(new_path)
 
-    shutil.copyfile(old_path,new_path)
-    # shutil.move(old_path,new_path)
+    # shutil.copyfile(old_path,new_path)
+    shutil.move(old_path,new_path)
+
+input('按兩下enter退出...')
 
 
 
