@@ -14,7 +14,16 @@ datas = pd.read_json('./每日各站進出站人數-2026.json')
 
 # print(datas216.loc[datas216_max])
 
-taipei = datas[datas['staCode']==1000]
-taipei_max = taipei['gateInComingCnt'].idxmax()
-print(taipei.loc[taipei_max])
+# taipei = datas[datas['staCode']==1000]
+# taipei_max = taipei['gateInComingCnt'].idxmax()
+# print(taipei.loc[taipei_max])
+
+# 取得20260101當日最少進站人數
+condition = datas['trnOpDate'] == 20260101
+datas0101 = datas[condition]
+datas0101_min = datas0101['gateInComingCnt'].idxmin()
+print(datas0101.loc[datas0101_min])
+
+
+
 
