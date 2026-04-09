@@ -16,12 +16,15 @@ print(df)
 # print(df.shape)
 # print(df.size)
 
+# 求目前年齡
 current_year = datetime.today().year
 # print(current_year)
 
 df['age'] = current_year - df['birth'].astype(int)
 # print(df)
 
+# 數學計算
+print(df['age'])
 print(df['age'].min())
 print(df['age'].max())
 print(df['age'].mean())
@@ -29,10 +32,19 @@ print(df['age'].median())
 print(df['age'].std())
 print(df['age'].describe())
 
-
 # print(df['name'])
 # print(df['gender'])
 # print(df.loc['A'])
 # print(df.iloc[0])
 # print(df.loc[1])
+
+# 條件篩選
+# condition = df['age'] >= 25
+# condition = df['name'] == 'Mary'
+# condition = df['name'] == 'QQ'
+
+condition = df['name'].str.contains('A&a')
+# condition = df['name'].str.contains('A|a')
+
+print(df[condition])
 
