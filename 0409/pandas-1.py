@@ -18,3 +18,19 @@ p3 = pd.DataFrame(
     }
 )
 print(p3)
+
+p4 = pd.DataFrame(
+    [
+        {
+            'name':'John',
+            'score': [90,80,70],
+            'subject': ['math','english','history']
+        },
+        {
+            'name':'asdf',
+            'score': [90,80,60],
+            'subject': ['math','english','history']
+        },
+    ]
+)
+print(p4)
