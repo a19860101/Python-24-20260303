@@ -13,7 +13,11 @@ df['animal_Variety'] = df['animal_Variety'].astype('str').str.strip()
 
 df['animal_Variety'] = df['animal_Variety'].replace({
     '混種犬':'混種狗',
-    '玩具貴賓犬':'迷你貴賓犬'
+    '玩具貴賓犬':'迷你貴賓犬',
+    '': '未知品種'
 })
 
 print(df['animal_Variety'].unique())
+print(df['animal_Variety'].nunique())
+
+print(df['animal_Variety'].value_counts(ascending=True).head(10))
