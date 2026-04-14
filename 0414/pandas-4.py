@@ -5,7 +5,13 @@ df1 = pd.read_json('./每日各站進出站人數-2026.json')
 df2 = pd.read_json('./車站基本資料集.json')
 
 print(df1)
-print(df2)
+# print(df2)
 
 result = pd.merge(df1, df2, left_on='staCode' ,right_on='stationCode')
-print(result.iloc[30])
+# print(result.iloc[30])
+
+data1 = df1.groupby('staCode')['gateInComingCnt'].min()
+data2 = df1.groupby('trnOpDate')['gateOutGoingCnt'].sum()
+
+# data3 = df1.groupby(['trnOpDate','staCode'])['gateInComingCnt'].sum()
+print(data1)
