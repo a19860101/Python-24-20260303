@@ -5,7 +5,7 @@ import pandas as pd
 # ar 地址
 # sna 站點名稱
 
-result = pd.read_json('./youbike_immediate.json')[['sarea','sna','ar','available_rent_bikes']]
+result = pd.read_json('https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json')[['sarea','sna','ar','available_rent_bikes']]
 
 condition = (result['sarea'].str.contains('大安區')) & (result['available_rent_bikes'] > 5)
 
