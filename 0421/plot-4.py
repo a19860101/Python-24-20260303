@@ -9,11 +9,23 @@ tsmc = pd.read_csv('./FMSRFK_2330_2025.csv',encoding='big5',header=1)
 dataMAX = tsmc['最高價'].dropna().tolist()
 dataMIN = tsmc['最低價'].dropna().tolist()
 
+dataMAX_float = [float(d.replace(',','')) for d in dataMAX]
+dataMIN_float = [float(d.replace(',','')) for d in dataMIN]
+
 print(dataMAX)
 print(dataMIN)
+print(dataMAX_float)
 
 x = range(1,13)
 
-plt.plot(x, dataMAX)
+# plt.xlim(0,13)
+plt.xticks(range(1,13))
+
+plt.ylim(500,2000)
+plt.yticks(range(500,2000,100))
+plt.grid()
+
+plt.plot(x, dataMAX_float, marker='o')
+plt.plot(x, dataMIN_float, marker='o')
 
 plt.show()
