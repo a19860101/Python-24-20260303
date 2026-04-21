@@ -27,5 +27,6 @@ plt.grid()
 
 plt.plot(x, dataMAX_float, marker='o')
 plt.plot(x, dataMIN_float, marker='o')
+plt.fill_between(x, dataMAX_float, dataMIN_float,alpha=1,color='pink')
 
 plt.show()
