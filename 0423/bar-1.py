@@ -4,19 +4,25 @@ plt.rc('font', family='Microsoft Jhenghei')
 
 x = ['A','B','C']
 y = [100,150,80]
+
+# 垂直
 # plt.ylim(0,500)
 # plt.yticks(range(0,500,50))
+# plt.grid()
+# plt.xlabel('分類')
+# plt.ylabel('數量')
+# plt.title('垂直長條圖')
+# plt.legend()
+# plt.bar(x, y, label="數量")
 
+# 水平
 plt.xlim(0,500)
 plt.xticks(range(0,500,50))
-
-plt.grid()
-plt.xlabel('分類')
-plt.ylabel('數量')
-plt.title('圖')
-
-# plt.bar(x, y, label="數量")
-plt.barh(x,y)
+plt.ylabel('分類')
+plt.xlabel('數量')
+plt.title('水平長條圖')
+plt.barh(x,y,label="數量")
 plt.legend()
+
 
 plt.show()
