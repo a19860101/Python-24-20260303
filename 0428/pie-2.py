@@ -30,7 +30,7 @@ os_data = [ios, android, samsung, other]
 
 print(os_data)
 # plt.pie(os_data, explode=explode, labels=label)
-w,t = plt.pie(os_data, explode=explode)
+w,t,a = plt.pie(os_data, explode=explode,autopct='%1.1f%%')
 plt.title('Mobile OS')
 plt.legend(w,label,title='OS',loc='center left',bbox_to_anchor=(1,0.5))
 
