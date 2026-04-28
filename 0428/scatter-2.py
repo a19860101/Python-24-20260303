@@ -9,14 +9,17 @@ x = np.random.uniform(10,100,100)
 # 銷售數量
 y = 30 + (x * 1.5) + np.random.normal(0,30,100)
 
+traffic = np.random.uniform(1,1000,100)
+
 # 狀況A：投放少賣很好
-x = np.append(x, [15])
-y = np.append(y,[220])
+# x = np.append(x, [15])
+# y = np.append(y,[220])
 
 # 狀況B：投放多賣不好
-x = np.append(x,[92])
-y = np.append(y,[15])
+# x = np.append(x,[92])
+# y = np.append(y,[15])
 
-plt.scatter(x,y)
+plt.scatter(x,y,s=traffic/5,c=traffic,cmap='autumn')
+plt.colorbar()
 plt.grid()
 plt.show()
