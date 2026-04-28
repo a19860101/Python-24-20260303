@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from contourpy.util.bokeh_util import lines_to_bokeh
 
 data = pd.read_csv('./mobile_os.csv')
 
@@ -28,6 +29,10 @@ explode = [0,0.05,0,0]
 os_data = [ios, android, samsung, other]
 
 print(os_data)
-plt.pie(os_data, labels=label, explode=explode)
-#
+# plt.pie(os_data, explode=explode, labels=label)
+w,t = plt.pie(os_data, explode=explode)
+plt.title('Mobile OS')
+plt.legend(w,label,title='OS',loc='center left',bbox_to_anchor=(1,0.5))
+
+
 plt.show()
