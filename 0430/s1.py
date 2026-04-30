@@ -17,10 +17,21 @@ top10 = sorted(result, key=lambda x: int(x['aqi']),reverse=True)[:10]
 
 aqi_y = []
 aqi_x = []
-for i in top10:
+colors = []
+
+for i in result:
     # print(i['sitename'],i['county'],i['aqi'])
     aqi_y.append(int(i['aqi']))
     aqi_x.append(i['sitename'])
+
+    if int(i['aqi']) > 60:
+        colors.append('red')
+    elif int(i['aqi']) > 40:
+        colors.append('orange')
+    elif int(i['aqi']) > 20:
+        colors.append('greenyellow')
+    else:
+        colors.append('green')
 
 print(aqi_x)
 print(aqi_y)
@@ -28,6 +39,6 @@ print(aqi_y)
 plt.yticks(range(0,120,10))
 plt.ylim(0,120)
 plt.grid(axis='y')
-plt.bar(aqi_x,aqi_y)
+plt.bar(aqi_x,aqi_y, color=colors)
 
 plt.show()
