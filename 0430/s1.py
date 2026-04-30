@@ -19,7 +19,7 @@ aqi_y = []
 aqi_x = []
 colors = []
 
-for i in result:
+for i in top10:
     # print(i['sitename'],i['county'],i['aqi'])
     aqi_y.append(int(i['aqi']))
     aqi_x.append(i['sitename'])
@@ -39,6 +39,7 @@ print(aqi_y)
 plt.yticks(range(0,120,10))
 plt.ylim(0,120)
 plt.grid(axis='y')
-plt.bar(aqi_x,aqi_y, color=colors)
+r = plt.bar(aqi_x,aqi_y, color=colors)
+plt.bar_label(r, fontsize=10)
 
 plt.show()
