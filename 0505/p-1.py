@@ -34,6 +34,10 @@ for data in datas:
     # print(data.select_one('td:nth-of-type(1) div.visible-phone').text)
     t = data.select_one('td:nth-of-type(1) div.visible-phone').text.strip()
     exc = data.select_one('td:nth-of-type(3)').text.strip()
-    result = twd / float(exc)
-    print(f'{t}:{exc} 台幣{twd}約等於{t} - {round(result)}')
+    if exc == '-':
+        # continue
+        result = '無匯率'
+    else:
+        result = round(twd / float(exc))
+    print(f'{t}:{exc} 台幣{twd}約等於{t} - {result}')
     print('-'*10)
