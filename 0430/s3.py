@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['Microsoft Jhenghei']
 data = pd.read_csv('./NPA_TD1.csv', header=1)
-
+print(set(data['設置縣市']))
 # 總數量
 total = len(data)
 print(total)
