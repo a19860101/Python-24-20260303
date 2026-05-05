@@ -17,10 +17,20 @@ title = htmlfile.find('h1').text
 print(title.strip())
 
 # print(htmlfile.select_one('tbody tr td:nth-of-type(3)'))
-exc = htmlfile.select('tbody tr td:nth-of-type(3)')
-for e in exc:
-    print(e.text)
+# exc = htmlfile.select('tbody tr td:nth-of-type(3)')
+# for e in exc:
+#     print(e.text)
 
-exc2 = htmlfile.select('tbody tr td:nth-of-type(5)')
-for e in exc2:
-    print(e.text.strip())
+# exc2 = htmlfile.select('tbody tr td:nth-of-type(5)')
+# for e in exc2:
+#     print(e.text.strip())
+
+# datas = htmlfile.find('tbody').find_all('tr')
+datas = htmlfile.select('tbody tr')
+# print(datas)
+for data in datas:
+    # print(data.select_one('td:nth-of-type(1) div.visible-phone').text)
+    t = data.select_one('td:nth-of-type(1) div.visible-phone').text.strip()
+    exc = data.select_one('td:nth-of-type(3)').text.strip()
+    print(t,exc)
+    print('-'*10)
