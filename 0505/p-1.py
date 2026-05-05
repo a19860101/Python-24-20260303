@@ -7,6 +7,8 @@ res = requests.get(url)
 
 htmlfile = bs4.BeautifulSoup(res.text, 'html.parser')
 
+
+twd = float(input('請輸入台幣金額：'))
 # print(htmlfile)
 # print(htmlfile.find('h1').text)
 # print(htmlfile.find('p'))
@@ -32,5 +34,6 @@ for data in datas:
     # print(data.select_one('td:nth-of-type(1) div.visible-phone').text)
     t = data.select_one('td:nth-of-type(1) div.visible-phone').text.strip()
     exc = data.select_one('td:nth-of-type(3)').text.strip()
-    print(t,exc)
+    result = twd / float(exc)
+    print(f'{t}:{exc} 台幣{twd}約等於{t} - {round(result)}')
     print('-'*10)
