@@ -2,15 +2,15 @@ import yfinance as yf
 import mplfinance as mpf
 from pygments.lexer import inherit
 
-tsmc = yf.Ticker('00899.TW')
-data = tsmc.history(period="6mo")
+tsmc = yf.Ticker('0056.TW')
+data = tsmc.history(period="1mo")
 
 # mpf.plot(data, type='candle')
 mc = mpf.make_marketcolors(
     up='red',
     down='green',
     edge='inherit',
-    # volume='in',
+    volume='in',
     inherit=True,
 )
 s = mpf.make_mpf_style(
