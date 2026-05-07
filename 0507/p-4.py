@@ -11,6 +11,16 @@ apple = yf.Ticker('AAPL')
 
 # print(tsmc.history(period="max")['Close'])
 
-tsmc_info = tsmc.info
-print(tsmc_info)
-print(tsmc_info.get('currentPrice'))
+# tsmc_stock = tsmc.info
+# print(tsmc_stock)
+# print(tsmc_stock.get('open'))
+# print(tsmc_stock.get('industry'))
+# print(tsmc_stock.get('priceToBook'))
+
+apple_stock = apple.info
+print(apple_stock.get('currentPrice'))
+
+
+
+
+
