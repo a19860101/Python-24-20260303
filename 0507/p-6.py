@@ -10,11 +10,12 @@ import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
 
-tw0050 = yf.download('0050.TW',period='1y')
+tw0050 = yf.download('0050.TW',period='3mo')
 
 print(tw0050['Close'].rolling(window=20).mean())
 tw0050['MA20'] = tw0050['Close'].rolling(window=20).mean()
 tw0050['MA60'] = tw0050['Close'].rolling(window=60).mean()
 
-tw0050[['Close','MA20','MA60']].plot(figsize=(20,10))
+tw0050[['Close','MA20','MA60']].plot(figsize=(12,4))
 plt.show()
+
